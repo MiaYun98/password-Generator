@@ -18,7 +18,7 @@ function generatePassword() {
       //at least one 
       needWord = needWord + alphabetLower[Math.floor(Math.random() * alphabetLower.length)];
       section = section + 1;
-    selectedWord
+    } else { 
       selectedWord = selectedWord + "";
       needWord = needWord + "";
     }
@@ -33,6 +33,7 @@ function generatePassword() {
       section = section + 1;
     } else { 
       selectedWord = selectedWord + "";
+      needWord = needWord + "";
     }
 
     // if yes to the numeric
@@ -45,6 +46,7 @@ function generatePassword() {
       section = section + 1;
     } else { 
       selectedWord = selectedWord + "";
+      needWord = needWord + "";
     }
 
     // if yes to the special characters
@@ -57,6 +59,7 @@ function generatePassword() {
       section = section + 1;
     } else { 
       selectedWord = selectedWord + "";
+      needWord = needWord + "";
     }
 
     // if the answer is valid with at least one character letter 
