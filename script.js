@@ -12,7 +12,7 @@ function generatePassword() {
 
     // asking if yes to the lowercase 
     var lowercase = confirm("Do you want lowecase in your password?")
-    if (lowercase) {
+    if (lowercase == true) {
       var alphabetLower = "abcdefghijklmnopqrstuvwxyz";
       selectedWord = selectedWord + alphabetLower;
       //at least one 
@@ -25,7 +25,7 @@ function generatePassword() {
 
     // if yes to the Uppercase 
     var uppercase = confirm("Do you want Uppercase in your password?");
-    if (uppercase) {
+    if (uppercase == true) {
       var alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       selectedWord = selectedWord + alphabetUpper;
       //at least one 
@@ -37,7 +37,7 @@ function generatePassword() {
 
     // if yes to the numeric
     var numeric = confirm("Do you want Numbers in your password?");
-    if (numeric) {
+    if (numeric == true) {
       var number = "0123456789";
       selectedWord = selectedWord + number;
       //at least one 
@@ -49,7 +49,7 @@ function generatePassword() {
 
     // if yes to the special characters
     var special = confirm("Do you want special characters in your password?");
-    if (special) {
+    if (special == true) {
       var characters="!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
       selectedWord = selectedWord + characters;
       //at least one 
@@ -68,7 +68,7 @@ function generatePassword() {
         needWord = needWord + selectedWord[Math.floor(Math.random() * selectedWord.length)];
       }
       //randomize the number
-      password = needWord.split('').sort(function(){return 0.5-Math.random()}).join('');
+      password = needWord.split("").sort(function(){return 0.5-Math.random()}).join("");
     }
   } else {
     //if the numer is not between 9 - 128
@@ -77,6 +77,7 @@ function generatePassword() {
   return password;
 }
 
+//coded one
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
